@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= @user_name%>'s Info</title>
+  </head>
+  
+  <body>
+    <h3><%= @user_name.capitalize %>:</h3>
+    <ul>
+      <li><b>Email: </b><%= @email %></li>
+      <li><b>Interests:</b> <%= @interests %></li>
+    </ul>
+
+    <br>
+    <h4><em>other users: </em></h4>
+    <ul>
+      <% other_users.each do |name| %>
+        <li><a href="/users/<%= name %>"><%= name.capitalize %></a></li>
+      <% end %>
+    </ul>
+      
+  </body>  
+</html>

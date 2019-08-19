@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dynamic Index</title>
+  </head>
+  <body>
+    <h2>Contents : </h2>
+    <ul>
+      <% @files.each do |file| %>
+        <li>
+          <a href="<%= file %>"><%= file %></a>
+        </li>
+      <% end %>
+    </ul>
+
+    <p>
+      <% if params[:order] == "reverse" %>
+        <a href="/">Normal Sort</a>
+      <% else %>
+        <a href="/?order=reverse">Reverse Sort</a>
+      <% end %>
+    </p>
+  </body>
+</html>

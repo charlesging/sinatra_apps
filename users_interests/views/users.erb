@@ -1,0 +1,16 @@
+
+<!doctype html>
+<html>
+  <head></head>
+  <body>
+    <h3>Users:</h3>
+    <ul>
+      <% @users.keys.each do |user_name| %>
+        <li>
+          <a href="/users/<%= user_name %>"><%= user_name %></a>
+        </li>
+      <% end %>
+    </ul>
+
+  </body>
+</html>
